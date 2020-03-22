@@ -14,6 +14,8 @@ MongoClient.connect(url, function(err, client) {
  
   const db = client.db(dbName);
   const collection= db.collection('students');
+  console.log('Collection',collection);
+
   collection.insertMany([
     {a : 1,c:1}, {a : 2}, {a : 3}
   ], function(err, result) {
@@ -49,7 +51,7 @@ const createConnection = () =>{
     //Resolve -- client
 }
 
-const databaseAndTable(client) =>{
+const databaseAndTable=(client) =>{
 
 }
 
